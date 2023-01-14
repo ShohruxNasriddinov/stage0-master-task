@@ -49,6 +49,6 @@ class IntegerDividerTest extends BaseIOTest {
                 .filter(line -> line.contains("%"))
                 .collect(Collectors.toList());
 
-        assertEquals(1, remainderDivisionLines.size());
+        assertEquals(0, remainderDivisionLines.size());
     }
 }

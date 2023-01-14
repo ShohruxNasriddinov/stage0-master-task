@@ -92,15 +92,17 @@ public class ArrayTasks {
      * arr = [1,-2, 3]      -> [1, 3] arr = [-1, -2, -3]   -> [] arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-        int count=1;
+        int count=0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i]>0)
                 count++;
         }
         int[] newArr=new int[count];
+        int a=0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i]>0){
-                newArr[i]=arr[i];
+                newArr[a]=arr[i];
+                a++;
             }
         }
         return newArr;
@@ -118,11 +120,11 @@ public class ArrayTasks {
     public int[][] sortRaggedArray(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                for (int k = j+1; k < arr[i].length; k++) {
-                    if (arr[i][j]>arr[i][k]){
-                        int temp=arr[i][j];
-                        arr[i][j]=arr[i][k];
-                        arr[i][k]=temp;
+                for (int k = 0; k < arr[i].length - j - 1; k++) {
+                    if (arr[i][k] > arr[i][k + 1]) {
+                        int t = arr[i][k];
+                        arr[i][k] = arr[i][k + 1];
+                        arr[i][k + 1] = t;
                     }
                 }
             }

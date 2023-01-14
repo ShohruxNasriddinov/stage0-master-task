@@ -25,7 +25,7 @@ public class ArrayTasks {
      */
     public int[] generateNumbers(int length) {
         int[] num = new int[length];
-        for (int i = 1; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             num[i]=i;
         }
         return num;
@@ -116,24 +116,25 @@ public class ArrayTasks {
      * arr = [[3, 1, 2,], [3,2]] -> [[2, 3], [1, 2, 3]] arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                for (int k = j+1; k < arr[i].length; k++) {
-                    if (arr[i][j]>arr[i][k]){
-                        int temp=arr[i][j];
-                        arr[i][j]=arr[i][k];
-                        arr[i][k]=temp;
-                    }
-                }
-            }
-        }
-        for (int i = 0; i < arr.length-1; i++) {
-            if (arr[i].length > arr[i + 1].length){
-                int[] a=arr[i];
-                arr[i]=arr[i+1];
-                arr[i+1]=a;
-            }
-        }
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                for (int k = j+1; k < arr[i].length; k++) {
+//                    if (arr[i][j]>arr[i][k]){
+//                        int temp=arr[i][j];
+//                        arr[i][j]=arr[i][k];
+//                        arr[i][k]=temp;
+//                    }
+//                }
+//            }
+//        }
+//        for (int i = 0; i < arr.length-1; i++) {
+//            if (arr[i].length > arr[i + 1].length){
+//                int[] a=arr[i];
+//                arr[i]=arr[i+1];
+//                arr[i+1]=a;
+//            }
+//        }
+//        return arr;
         return arr;
     }
 
